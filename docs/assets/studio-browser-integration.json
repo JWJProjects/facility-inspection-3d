@@ -1,0 +1,50 @@
+{
+  "steps": [
+    {
+      "step": "same-origin child readiness",
+      "result": "3D 場景已連線"
+    },
+    {
+      "step": "parent rejects early action outside child-reported range",
+      "result": "距離太遠，請先靠近門牌 01。"
+    },
+    {
+      "step": "parent gate action opened authentic 3D scene",
+      "result": "3D 場景已回報：巡檢門開啟。"
+    },
+    {
+      "step": "parent equipment readout from child",
+      "result": "P-02指示燈不亮"
+    },
+    {
+      "step": "3D report completes exact local JSON",
+      "result": {
+        "scenario": "training-pump-room-01",
+        "scenarioVersion": "1.0.0",
+        "mode": "three-studio",
+        "simulated": true,
+        "stations": [
+          {
+            "id": "01",
+            "inspection": "gate",
+            "result": "opened"
+          },
+          {
+            "id": "02",
+            "inspection": "P-02",
+            "result": "指示燈不亮"
+          },
+          {
+            "id": "03",
+            "inspection": "incident-report",
+            "category": "indicator",
+            "categoryLabel": "指示燈異常",
+            "notes": "3D 瀏覽器整合測試"
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

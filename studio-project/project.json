@@ -1,0 +1,44 @@
+{
+  "version": 2,
+  "name": "巡場｜3D 設施巡檢演練",
+  "engineVersion": "0.6.0",
+  "startScene": "inspection-entry",
+  "settings": {
+    "loadingScene": null,
+    "rendering": {
+      "forceWebGL": false,
+      "antialias": true,
+      "maxPixelRatio": 1.25,
+      "shadows": false,
+      "shadowMapSize": 1024,
+      "exposure": 1,
+      "batching": true
+    },
+    "physics": {
+      "gravity": [
+        0,
+        -9.81,
+        0
+      ],
+      "fixedTimestep": 0.016666666666666666,
+      "maxSubsteps": 5
+    },
+    "build": {
+      "active": "web",
+      "profiles": {
+        "web": {
+          "name": "Web",
+          "target": "web",
+          "scenes": [
+            "inspection-entry",
+            "inspection-equipment"
+          ],
+          "outputDir": null,
+          "includeAllAssets": false,
+          "title": "巡場｜3D 設施巡檢演練",
+          "basePath": ""
+        }
+      }
+    }
+  }
+}

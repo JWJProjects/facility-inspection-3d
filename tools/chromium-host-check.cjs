@@ -1,0 +1,68 @@
+const {app,BrowserWindow}=require('electron');
+const fs=require('node:fs');
+const path=require('node:path');
+const sleep=(ms)=>new Promise(r=>setTimeout(r,ms));
+const evidence=path.join(process.env.XUNCHANG_PROJECT||path.resolve(__dirname,'..'),'docs','assets');
+app.commandLine.appendSwitch('use-gl','angle');
+app.commandLine.appendSwitch('use-angle','swiftshader');
+app.commandLine.appendSwitch('enable-unsafe-swiftshader');
+const detail={steps:[],errors:[]};
+const check=(value,message)=>{if(!value)throw new Error(message);return value;};
+const mark=(step,result)=>{detail.steps.push({step,result});console.log(step,result);};
+async function wait(fn,label,timeout=20000){
+ const start=Date.now();
+ while(Date.now()-start<timeout){const result=await fn();if(result)return result;await sleep(150);}
+ throw new Error('Timed out: '+label);
+}
+async function run(){
+ const win=new BrowserWindow({width:1250,height:900,show:true,webPreferences:{sandbox:true,contextIsolation:true,nodeIntegration:false,backgroundThrottling:false}});
+ const run=(code)=>win.webContents.executeJavaScript(code,true);
+ win.webContents.on('console-message', ({level,message})=>{if(level==='error')detail.errors.push(message)});
+ await win.loadURL('http://127.0.0.1:4182/');
+ await run("document.querySelector('[data-mode=studio]').click()");
+ await wait(()=>run("(()=>{const e=document.querySelector('#three-stage-frame')?.contentDocument?.querySelector('#start');return e&&!e.hidden;})()"),'stock Three Studio start button visible',30000);
+ await run("document.querySelector('#stage').scrollIntoView({block:'start'});");
+ const button=await run("(()=>{const f=document.querySelector('#three-stage-frame');const a=f.getBoundingClientRect();const b=f.contentDocument.querySelector('#start').getBoundingClientRect();return {x:Math.round(a.x+b.x+b.width/2),y:Math.round(a.y+b.y+b.height/2)};})()");
+ for(const type of ['mouseDown','mouseUp']) win.webContents.sendInputEvent({type,...button,button:'left',clickCount:1});
+ const field=(id)=>run("document.getElementById("+JSON.stringify(id)+")?.textContent");
+ await wait(async()=>((await field('studio-title'))||'').includes('已連線'),'child Ready arrives at host');
+ mark('same-origin child readiness',await field('studio-title'));
+ await sleep(900);
+ const flow=(key)=>run("document.querySelector('[data-action="+key+"]')?.click()");
+ const state=()=>field('interaction-status');
+ await flow('gate');
+ await wait(async()=>/太遠|靠近門牌/.test(await state()),'far gate blocked in host');
+ mark('parent rejects early action outside child-reported range',await state());
+ const inp=(type,keyCode)=>win.webContents.sendInputEvent({type,keyCode});
+ inp('keyDown','W');
+ await wait(async()=>/進入門前互動區/.test(await state()),'walk into gate zone',25000);
+ inp('keyUp','W');
+ await flow('gate');
+ await wait(async()=>/巡檢門(?:已)?開啟/.test(await state()),'child gate-open accepted by host',25000);
+ mark('parent gate action opened authentic 3D scene',await state());
+ await flow('next');
+ await wait(async()=>await field('task-title')==='設備銘牌','step 02');
+ const view=await run("(()=>{const r=document.querySelector('#three-stage-frame').getBoundingClientRect();return {x:Math.round(r.x+r.width/2),y:Math.round(r.y+r.height/2)};})()");
+ for(const type of ['mouseDown','mouseUp']) win.webContents.sendInputEvent({type,...view,button:'left',clickCount:1});
+ await sleep(700);
+ inp('keyDown','W');
+ await wait(async()=>/已靠近 P-02/.test(await state()),'walk past doorway and approach equipment',25000);
+ inp('keyUp','W');
+ await flow('inspect');
+ await wait(()=>run("document.querySelector('.readout')?.textContent.includes('指示燈不亮')"),'child equipment observation arrives at host',25000);
+ mark('parent equipment readout from child',await run("document.querySelector('.readout').textContent"));
+ await sleep(1000);
+ fs.writeFileSync(path.join(evidence,'studio-browser-05-integrated.png'),(await win.webContents.capturePage()).toPNG());
+ await flow('next');
+ const form=await run("!!document.querySelector('#incident-form')");
+ check(form,'report form not found from 3D route');
+ await run("document.querySelector('#incident-form').requestSubmit()");
+ check(await run("document.querySelector('#incident-category').getAttribute('aria-invalid')==='true'"),'missing category should not finish');
+ await run("const select=document.querySelector('#incident-category');select.value=select.options[1].value;document.querySelector('textarea[name=notes]').value='3D 瀏覽器整合測試';document.querySelector('#incident-form').requestSubmit();");
+ const report=await wait(()=>run("(()=>{const e=document.querySelector('[data-testid=export-report]');return e?fetch(e.href).then(r=>r.json()):null;})()"),'generated local JSON');
+ check(report.stations.length===3,'incorrect report stations');
+ check(report.stations[2].notes==='3D 瀏覽器整合測試','incorrect notes');
+ mark('3D report completes exact local JSON',report);
+ fs.writeFileSync(path.join(evidence,'studio-browser-06-report.png'),(await win.webContents.capturePage()).toPNG());
+}
+app.whenReady().then(run).then(()=>{detail.passed=true;fs.writeFileSync(path.join(evidence,'studio-browser-integration.json'),JSON.stringify(detail,null,2));app.exit(0);}).catch(error=>{detail.failure=String(error.stack);console.error(error);fs.writeFileSync(path.join(evidence,'studio-browser-integration.json'),JSON.stringify(detail,null,2));app.exit(1);});

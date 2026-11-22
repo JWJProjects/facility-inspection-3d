@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" role="img" aria-label="抽水站示意：入口門、P-02 設備和回報台">
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#151c20"/><stop offset="1" stop-color="#464b47"/></linearGradient>
+    <linearGradient id="ground" x2="0" y2="1"><stop stop-color="#515751"/><stop offset="1" stop-color="#252b29"/></linearGradient>
+    <linearGradient id="wall" x2="1" y2="1"><stop stop-color="#889087"/><stop offset="1" stop-color="#565e55"/></linearGradient>
+    <linearGradient id="wall2" x2="1" y2=".3"><stop stop-color="#4e574e"/><stop offset="1" stop-color="#343d3a"/></linearGradient>
+    <linearGradient id="roof" x2="1" y2="1"><stop stop-color="#c3c7b6"/><stop offset="1" stop-color="#7c8377"/></linearGradient>
+    <linearGradient id="panel" x2="1" y2="1"><stop stop-color="#c4bda4"/><stop offset="1" stop-color="#8c846c"/></linearGradient>
+    <pattern id="hatch" width="13" height="13" patternUnits="userSpaceOnUse" patternTransform="rotate(43)"><path d="M0 0V13" stroke="#c5baa0" stroke-width="4" opacity=".18"/></pattern>
+    <pattern id="vents" width="8" height="7" patternUnits="userSpaceOnUse"><path d="M0 0H8" stroke="#1f282b" stroke-width="2"/></pattern>
+    <pattern id="dotted" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#b7b9a8" opacity=".13"/></pattern>
+  </defs>
+  <rect width="960" height="560" fill="url(#sky)"/>
+  <path d="M0 305l157-35 130 14 188-26 208 11 277-30v321H0z" fill="url(#ground)"/>
+  <path d="M0 305l157-35 130 14 188-26 208 11 277-30v321H0z" fill="url(#dotted)"/>
+  <g stroke="#9b9d8a" fill="none" opacity=".21">
+    <path d="M0 344l960 69M0 386l960 86M0 437l960 108M0 504l441 56M229 282 91 560M387 273 279 560M519 268l14 292M647 270l133 290M773 260l187 235M905 249l55 73"/>
+  </g>
+  <g stroke="#bac0ae" fill="none" opacity=".3">
+    <path d="M28 61V27h36m832 0h36v34m0 438v34h-36M64 533H28v-34" stroke-width="2"/>
+    <path d="M35 98h36m-36 17h20m-20 17h20m-20 17h20M925 98h-36m36 17h-20m20 17h-20m20 17h-20"/>
+  </g>
+  <path d="M165 411 481 504l366-80-87-69-438-71z" fill="#161d1c" opacity=".83"/>
+  <path d="M192 365 494 453l301-66v-22l-300 60-303-81z" fill="#74796a" stroke="#1b2221" stroke-width="2"/>
+  <path d="M192 344 495 431l300-66-299-95z" fill="#929688" stroke="#202624" stroke-width="2"/>
+  <path d="M229 158 494 236v173l-265-79z" fill="url(#wall)" stroke="#242c2b" stroke-width="3"/>
+  <path d="M494 236 736 182v175l-242 52z" fill="url(#wall2)" stroke="#242c2b" stroke-width="3"/>
+  <path d="M207 150 468 92l292 83-267 64z" fill="url(#roof)" stroke="#21292a" stroke-width="3"/>
+  <path d="M207 150l286 89 267-64v13l-267 66-286-87z" fill="#656e63" stroke="#242b27" stroke-width="2"/>
+  <path d="M230 144 469 100l269 76m-479-36 262 84m-223-94 262 85m-220-95 260 84m-219-95 260 84m-220-94 260 83" fill="none" stroke="#D8D9C7" stroke-width="1.3" opacity=".45"/>
+  <path d="M229 188 494 274m0-2 241-53M230 322l263 78 243-52M271 178v157m143-116v164m130-142v154m170-192v160" fill="none" stroke="#323c36" stroke-width="2" opacity=".63"/>
+  <path d="M246 216l62 19v47l-62-18z" fill="#303d3d" stroke="#202828" stroke-width="3"/>
+  <path d="M252 226l50 14v6l-50-14zm0 11 50 14v6l-50-14zm0 11 50 14v6l-50-14z" fill="#a2ab9a" opacity=".66"/>
+  <path d="M331 233l75 24v127l-75-23z" fill="#252c2b" stroke="#28302c" stroke-width="5"/>
+  <path d="m338 243 60 18v111l-60-18z" fill="#655c43" stroke="#d6bb65" stroke-width="3"/>
+  <path d="m345 249 47 15v101l-47-14z" fill="#a79a66"/>
+  <path d="M348 266l39 13v18l-39-12z" fill="#3a4038"/>
+  <path d="M349 269l34 10m-34-4 34 10m-34-4 34 10" stroke="#9d9e85" stroke-width="1.1" opacity=".54"/>
+  <path d="m381 320 7 2v10l-7-2z" fill="#222822"/>
+  <path d="m327 359 77 23-12 20-82-23z" fill="#787560" stroke="#343a32" stroke-width="2"/>
+  <path d="m314 380 76 23m-74-19 72 21" stroke="#afaa8b" stroke-width="1.3"/>
+  <path d="m310 382 23-32-47-13-20 34 74 22 20-32m40 13 22 6-23 35-82-25" fill="none" stroke="#d9b64b" stroke-width="3" stroke-dasharray="9 5" opacity=".72"/>
+  <path d="m536 272 151-33v101l-151 33z" fill="#222a2a" stroke="#28312e" stroke-width="5"/>
+  <path d="m541 276 143-32v92l-143 32z" fill="#46544c" stroke="#969d89" stroke-width="2"/>
+  <path d="M550 283l126-28v12l-126 28z" fill="#708074"/>
+  <path d="m567 330 100-22 7 23-103 22z" fill="#171f20"/>
+  <path d="m583 296 34-7 33 9v35l-35 8-32-9z" fill="#54726a" stroke="#1d2828" stroke-width="2"/>
+  <ellipse cx="583" cy="314" rx="15" ry="18" fill="#778c7f" stroke="#202e2e" stroke-width="4"/>
+  <ellipse cx="583" cy="314" rx="6" ry="9" fill="#425854" stroke="#a2a791" stroke-width="2"/>
+  <path d="M607 297V285l43-10v17l-15 3v-10m9-6v-13" fill="none" stroke="#abc0a2" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M614 295l10-2m-9 7 18-4m-17 10 23-5m-22 10 24-6m-25 11 24-5m-25 11 21-5" stroke="#a0ad98" stroke-width="1.8"/>
+  <path d="m669 270 9-2v43l-9 2z" fill="#a9a185"/>
+  <circle cx="673.4" cy="283" r="2.6" fill="#44382c"/>
+  <path d="M540 367l148-33-1 10-147 33z" fill="#747b65"/>
+  <path d="m725 361 47-12 31 9-47 14z" fill="#a9a388" stroke="#1f2523" stroke-width="2"/>
+  <path d="m728 361 26 8v31l-26-8z" fill="#616758" stroke="#262c27" stroke-width="2"/>
+  <path d="m754 369 47-12v32l-47 12z" fill="#9e997e" stroke="#262c27" stroke-width="2"/>
+  <path d="m760 367 31-9v15l-31 8z" fill="url(#panel)" stroke="#30352d" stroke-width="2"/>
+  <path d="m765 369 13-3m-13 6 20-5m-20 8 18-4" stroke="#5c604e" stroke-width="1"/>
+  <path d="m758 396 41-10m-19 7v-10" stroke="#4e5548" stroke-width="2"/>
+  <path d="m232 405 255 75 319-70m-230 60 72-16" fill="none" stroke="#a08748" stroke-width="3" opacity=".62" stroke-dasharray="10 7"/>
+  <path d="m117 358 34-7 55 15m-62-13-10-18m-24 22 9-27m-5 42 36-5 35 9" fill="none" stroke="#292f2b" stroke-width="4"/>
+  <g opacity=".32" fill="none" stroke="#c8c9af" stroke-width="1.2" stroke-dasharray="4 4">
+    <path d="M84 175V88h155M772 116h113v172m-43 141 48 14v24m-766-12-56 14v26"/>
+  </g>
+  <path d="M553 448l44-10 38 9-44 11zM555 448v14l37 12 44-12v-15" fill="url(#hatch)" stroke="#9b9986" stroke-width="1.4" opacity=".55"/>
+</svg>

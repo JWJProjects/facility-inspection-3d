@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "id": "inspection-control-cabinet",
+  "kind": "model",
+  "importedAt": 0,
+  "hash": "d2a4a61954ed8864080b079ef301196600b85dd37044563ca27c30eb1bd17912",
+  "settings": {
+    "kind": "model",
+    "scale": 1,
+    "upAxis": "y",
+    "generateColliders": false,
+    "importMaterials": true,
+    "importAnimations": true,
+    "maxTextureSize": 2048,
+    "compressGeometry": true,
+    "format": "gltf",
+    "importCameras": false,
+    "importLights": false
+  }
+}

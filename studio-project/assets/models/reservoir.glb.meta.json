@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "id": "inspection-reservoir",
+  "kind": "model",
+  "importedAt": 0,
+  "hash": "06003ae54c349f21f1f2b991c8390165216306858d708369fdb5a4241fdaac01",
+  "settings": {
+    "kind": "model",
+    "scale": 1,
+    "upAxis": "y",
+    "generateColliders": false,
+    "importMaterials": true,
+    "importAnimations": true,
+    "maxTextureSize": 2048,
+    "compressGeometry": true,
+    "format": "gltf",
+    "importCameras": false,
+    "importLights": false
+  }
+}

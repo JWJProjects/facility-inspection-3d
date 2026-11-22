@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>巡場｜3D 設施巡檢演練</title>
+  <link rel="icon" href="./mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">跳至巡檢任務</a>
+<header class="site-header">
+  <div class="wrap masthead">
+    <a class="identity" href="./" aria-label="巡場首頁">
+      <span class="identity-sign" aria-hidden="true"><svg viewBox="0 0 30 30" fill="none"><path d="M4 14.5 15 5l11 9.5V25H4zM10 25V15l5-4 5 4v10M15 18.5v6.5" stroke="currentColor" stroke-width="2.1" stroke-linecap="square"/></svg></span>
+      <span><strong>巡場</strong><small>設施巡檢演練</small></span>
+    </a>
+    <span class="header-note"><span aria-hidden="true">◇</span> 模擬訓練</span>
+  </div>
+</header>
+<main id="main-content" class="wrap" tabindex="-1">
+  <section class="intro" aria-labelledby="page-title">
+    <div>
+      <p class="context-label"><span></span> 情境 01／抽水站</p>
+      <h1 id="page-title">抽水站例行巡檢</h1>
+      <p class="intro-copy">走近巡檢門、核對設備指示燈，再記錄異常。<br class="desktop-break">每個巡檢點都要確認，才能匯出本次演練摘要。</p>
+    </div>
+    <aside class="session-facts" aria-label="情境資訊">
+      <strong><span class="station-code">03</span> 個巡檢步驟</strong>
+      <span>約 3–5 分鐘</span>
+      <span>虛構場域與設備資料</span>
+    </aside>
+  </section>
+
+  <section class="work-area" aria-label="巡檢操作">
+    <figure class="stage-panel" id="stage" tabindex="-1">
+      <div class="stage-top">
+        <div><span class="stage-label"><span aria-hidden="true">⌾</span> 場域視圖</span><span class="stage-name">｜抽水站</span></div>
+        <div class="mode-select" role="group" id="mode-select" aria-label="場域視圖模式">
+          <button type="button" aria-pressed="true" data-mode="guide">逐點導覽</button>
+          <button type="button" aria-pressed="false" data-mode="studio">3D 巡檢</button>
+        </div>
+      </div>
+      <div class="stage-media" id="guide-view">
+        <img src="./facility.svg" width="960" height="560" alt="">
+        <span class="diagram-tag">場域示意圖</span>
+        <span class="diagram-point pt-gate" id="diagram-gate" aria-hidden="true">01</span>
+        <span class="diagram-point pt-unit" id="diagram-unit" aria-hidden="true">02</span>
+        <span class="diagram-point pt-report" id="diagram-report" aria-hidden="true">03</span>
+      </div>
+      <div class="stage-media studio-view" id="studio-view" hidden>
+        <div class="studio-placeholder" id="studio-placeholder">
+          <span class="placeholder-icon" aria-hidden="true">◇</span>
+          <h3 id="studio-title">3D 場景尚未載入</h3>
+          <p id="studio-message">目前可用逐點導覽完成全程；它不包含 3D 走位與碰撞。</p>
+          <button type="button" class="button quiet in-dark" id="studio-fallback">返回逐點導覽</button>
+        </div>
+      </div>
+      <figcaption id="stage-caption">三個巡檢點依序是入口門、P-02 設備與回報台。此圖為訓練情境示意。</figcaption>
+    </figure>
+
+    <section class="task-panel" id="current-task" aria-labelledby="task-title" tabindex="-1">
+      <div class="task-progress"><span>目前任務</span><span id="step-count">01 / 03</span></div>
+      <div id="task-content">
+        <span class="task-kicker">巡檢點 01</span>
+        <h2 id="task-title">入口門</h2>
+        <p>先前往巡檢門。站在門前的互動區內，才能開門。</p>
+        <div class="feedback" id="interaction-status" role="status" aria-live="polite">未進入門前互動區，門維持關閉。</div>
+        <div class="actions">
+          <button type="button" class="button primary" data-action="approach">前往巡檢門 <span aria-hidden="true">→</span></button>
+          <button type="button" class="button quiet" data-action="gate" data-testid="gate-action">開啟巡檢門</button>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <section class="route-panel" id="progress" aria-labelledby="route-title" tabindex="-1">
+    <div class="route-head"><h2 id="route-title">巡檢路線</h2><span id="route-total">完成 0／3</span></div>
+    <ol id="task-list" class="task-list">
+      <li aria-current="step"><span class="route-no">01</span><div><strong>入口門</strong><small>進行中</small></div></li>
+      <li><span class="route-no">02</span><div><strong>設備銘牌</strong><small>待檢</small></div></li>
+      <li><span class="route-no">03</span><div><strong>異常回報</strong><small>待檢</small></div></li>
+    </ol>
+  </section>
+
+  <section class="report-panel" id="report-summary" aria-labelledby="report-title" tabindex="-1">
+    <div class="report-top"><div><p class="context-label">匯報前核對</p><h2 id="report-title">本次演練摘要</h2></div>
+    <button type="button" class="button quiet" id="reset-session">重新演練</button></div>
+    <p id="report-empty">完成三個巡檢點後，這裡會顯示摘要與 JSON 下載。</p>
+    <div id="report-content" hidden></div>
+  </section>
+  <noscript><p>逐點導覽需要 JavaScript 才能操作。請啟用後重新載入。</p></noscript>
+</main>
+<footer class="site-footer"><div class="wrap footer-inner"><span>巡場｜設施巡檢演練</span><span>虛構場域與設備資料 · 紀錄僅在此頁，未上傳</span></div></footer>
+<nav class="mobile-nav" aria-label="快速跳轉">
+  <a href="#current-task"><span aria-hidden="true">⌖</span>巡檢</a>
+  <a href="#progress"><span aria-hidden="true">☷</span>進度</a>
+  <a href="#report-summary"><span aria-hidden="true">▤</span>摘要</a>
+</nav>
+</body>
+</html>

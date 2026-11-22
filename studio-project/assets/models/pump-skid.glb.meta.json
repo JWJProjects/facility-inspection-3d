@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "id": "inspection-pump-skid",
+  "kind": "model",
+  "importedAt": 0,
+  "hash": "8785eb1bf75b6a302ea2002a2ed4a0677e4bb70b445c2518c75600523ab1c46b",
+  "settings": {
+    "kind": "model",
+    "scale": 1,
+    "upAxis": "y",
+    "generateColliders": false,
+    "importMaterials": true,
+    "importAnimations": true,
+    "maxTextureSize": 2048,
+    "compressGeometry": true,
+    "format": "gltf",
+    "importCameras": false,
+    "importLights": false
+  }
+}

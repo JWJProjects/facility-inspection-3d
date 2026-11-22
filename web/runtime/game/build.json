@@ -1,0 +1,85 @@
+{
+  "formatVersion": 7,
+  "title": "巡場｜3D 設施巡檢演練",
+  "rendering": {
+    "forceWebGL": false,
+    "antialias": true,
+    "maxPixelRatio": 1.25,
+    "shadows": false,
+    "shadowMapSize": 1024,
+    "exposure": 1,
+    "batching": true
+  },
+  "physics": {
+    "gravity": [
+      0,
+      -9.81,
+      0
+    ],
+    "fixedTimestep": 0.016666666666666666,
+    "maxSubsteps": 5
+  },
+  "scenes": [
+    {
+      "id": "inspection-entry",
+      "name": "01-entrance",
+      "path": "scenes/01-entrance.8336a568.json"
+    },
+    {
+      "id": "inspection-equipment",
+      "name": "02-equipment",
+      "path": "scenes/02-equipment.fd7b16d6.json"
+    }
+  ],
+  "loadingScene": null,
+  "assets": {
+    "inspection-control-cabinet": "assets/models/control-cabinet.d2a4a619.glb",
+    "inspection-pump-skid": "assets/models/pump-skid.8785eb1b.glb",
+    "inspection-reservoir": "assets/models/reservoir.06003ae5.glb"
+  },
+  "materials": {},
+  "prefabs": {},
+  "textureEncodings": {},
+  "assetSettings": {
+    "inspection-control-cabinet": {
+      "kind": "model",
+      "scale": 1,
+      "upAxis": "y",
+      "generateColliders": false,
+      "importMaterials": true,
+      "importAnimations": true,
+      "maxTextureSize": 2048,
+      "compressGeometry": true,
+      "format": "gltf",
+      "importCameras": false,
+      "importLights": false
+    },
+    "inspection-pump-skid": {
+      "kind": "model",
+      "scale": 1,
+      "upAxis": "y",
+      "generateColliders": false,
+      "importMaterials": true,
+      "importAnimations": true,
+      "maxTextureSize": 2048,
+      "compressGeometry": true,
+      "format": "gltf",
+      "importCameras": false,
+      "importLights": false
+    },
+    "inspection-reservoir": {
+      "kind": "model",
+      "scale": 1,
+      "upAxis": "y",
+      "generateColliders": false,
+      "importMaterials": true,
+      "importAnimations": true,
+      "maxTextureSize": 2048,
+      "compressGeometry": true,
+      "format": "gltf",
+      "importCameras": false,
+      "importLights": false
+    }
+  },
+  "scripts": "scripts/bundle.ff3e6789.mjs"
+}

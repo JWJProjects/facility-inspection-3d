@@ -1,0 +1,60 @@
+{
+  "formatVersion": 1,
+  "files": [
+    {
+      "path": "favicon.svg",
+      "bytes": 324,
+      "sha256": "33553eb045dfdc222245e58cbcd3ab690d0ddca5bb7e59b41f5da02c37219bc6"
+    },
+    {
+      "path": "game/assets/models/control-cabinet.d2a4a619.glb",
+      "bytes": 26512,
+      "sha256": "d2a4a61954ed8864080b079ef301196600b85dd37044563ca27c30eb1bd17912"
+    },
+    {
+      "path": "game/assets/models/pump-skid.8785eb1b.glb",
+      "bytes": 144120,
+      "sha256": "8785eb1bf75b6a302ea2002a2ed4a0677e4bb70b445c2518c75600523ab1c46b"
+    },
+    {
+      "path": "game/assets/models/reservoir.06003ae5.glb",
+      "bytes": 64060,
+      "sha256": "06003ae54c349f21f1f2b991c8390165216306858d708369fdb5a4241fdaac01"
+    },
+    {
+      "path": "game/build.json",
+      "bytes": 2078,
+      "sha256": "8892d4508e86eb8ec1b4a1e089787be28b64ab4c73bbbd1c39fd84f4d091e731"
+    },
+    {
+      "path": "game/scenes/01-entrance.8336a568.json",
+      "bytes": 209156,
+      "sha256": "8336a568f215387e2709b5c93eac49b1d7230a26fb34f280cc084d3545bd1352"
+    },
+    {
+      "path": "game/scenes/02-equipment.fd7b16d6.json",
+      "bytes": 208687,
+      "sha256": "fd7b16d6a41da053021806edf0625a2f528dca519f7827acd346cc0b286e7b48"
+    },
+    {
+      "path": "game/scripts/bundle.ff3e6789.mjs",
+      "bytes": 10855,
+      "sha256": "ff3e678922ec07d308aaf0e4a6cd3db3add6b2dc801480aba4cfacc29544469d"
+    },
+    {
+      "path": "index.html",
+      "bytes": 3021,
+      "sha256": "b96a916f71822225489a8da1463066536e1e650c2be53aed54f00ef9294a80ca"
+    },
+    {
+      "path": "player/main.c7f424a2.js",
+      "bytes": 4307777,
+      "sha256": "37c4026b4250b8590b8a2dd78e74d2193abbc9b117533a4e61cbfb0f5f4e928f"
+    },
+    {
+      "path": "player/touch.9a94becf.js",
+      "bytes": 21004,
+      "sha256": "0d6ee5216decd250099dfa6f708be6a1f34e2d8c5c5b33bf5b8fda06dbc85a2a"
+    }
+  ]
+}

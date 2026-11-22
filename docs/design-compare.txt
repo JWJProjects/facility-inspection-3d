@@ -1,0 +1,25 @@
+## 各案指紋
+- public-facility-access-map: 主色相 [210, 0]°  字族 ['sans']  圓角中位 0.0px  基準字 Nonepx
+    共同指紋 1 項 [ok]: 首屏 4 格 KPI 卡
+- report-evidence-ai: 主色相 [30, 0]°  字族 ['kai', 'mono', 'sans', 'serif']  圓角中位 2.0px  基準字 14.0px
+    共同指紋 0 項 [ok]: 無
+- public-data-quality-ai: 主色相 [240, 0]°  字族 ['mono', 'sans']  圓角中位 3.0px  基準字 13.0px
+    共同指紋 0 項 [ok]: 無
+- accessible-service-qa: 主色相 [30, 210]°  字族 ['mono', 'sans']  圓角中位 0.0px  基準字 18.0px
+    共同指紋 0 項 [ok]: 無
+- facility-inspection-3d: 主色相 [30, 120]°  字族 ['mono', 'sans']  圓角中位 5.0px  基準字 18.0px
+    共同指紋 0 項 [ok]: 無
+
+## 兩兩相似度（上限 0.55）
+- public-facility-access-map × report-evidence-ai: 0.18 [ok]  (色相 0.42 / 指紋 0.00 / 字族 0.25 / 圓角 0)
+- public-facility-access-map × public-data-quality-ai: 0.14 [ok]  (色相 0.20 / 指紋 0.00 / 字族 0.50 / 圓角 0)
+- public-facility-access-map × accessible-service-qa: 0.48 [ok]  (色相 0.73 / 指紋 0.00 / 字族 0.50 / 圓角 1)
+- public-facility-access-map × facility-inspection-3d: 0.17 [ok]  (色相 0.26 / 指紋 0.00 / 字族 0.50 / 圓角 0)
+- report-evidence-ai × public-data-quality-ai: 0.34 [ok]  (色相 0.34 / 指紋 0.00 / 字族 0.50 / 圓角 1)
+- report-evidence-ai × accessible-service-qa: 0.35 [ok]  (色相 0.78 / 指紋 0.00 / 字族 0.50 / 圓角 0)
+- report-evidence-ai × facility-inspection-3d: 0.36 [ok]  (色相 0.82 / 指紋 0.00 / 字族 0.50 / 圓角 0)
+- public-data-quality-ai × accessible-service-qa: 0.36 [ok]  (色相 0.61 / 指紋 0.00 / 字族 1.00 / 圓角 0)
+- public-data-quality-ai × facility-inspection-3d: 0.31 [ok]  (色相 0.46 / 指紋 0.00 / 字族 1.00 / 圓角 0)
+- accessible-service-qa × facility-inspection-3d: 0.40 [ok]  (色相 0.73 / 指紋 0.00 / 字族 1.00 / 圓角 0)
+
+結果：通過

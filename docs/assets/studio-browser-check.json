@@ -1,0 +1,212 @@
+[
+  {
+    "test": "engine",
+    "data": {
+      "electron": "43.2.0",
+      "chromium": "150.0.7871.129",
+      "rendering": "ANGLE SwiftShader/WebGL2 software",
+      "url": "http://127.0.0.1:4182/runtime/?qa=1"
+    }
+  },
+  {
+    "test": "initial",
+    "data": {
+      "playerX": "-0.000",
+      "playerZ": "4.250",
+      "gateOpen": "false",
+      "gateRange": "false",
+      "equipmentRange": "false",
+      "attempts": "0",
+      "rejected": "0",
+      "opening": "false",
+      "observed": "false",
+      "status": "距離太遠，請走到門牌 01 前"
+    }
+  },
+  {
+    "test": "far E rejected, held E only one attempt",
+    "data": {
+      "playerX": "-0.000",
+      "playerZ": "4.250",
+      "gateOpen": "false",
+      "gateRange": "false",
+      "equipmentRange": "false",
+      "attempts": "1",
+      "rejected": "1",
+      "opening": "false",
+      "observed": "false",
+      "status": "距離太遠，請走到門牌 01 前"
+    }
+  },
+  {
+    "test": "closed Rapier collider blocks forward walking",
+    "data": {
+      "first": {
+        "playerX": "-0.000",
+        "playerZ": "0.567",
+        "gateOpen": "false",
+        "gateRange": "true",
+        "equipmentRange": "false",
+        "attempts": "1",
+        "rejected": "1",
+        "opening": "false",
+        "observed": "false",
+        "status": "已到門前，按 E 開門"
+      },
+      "held": {
+        "playerX": "-0.000",
+        "playerZ": "0.395",
+        "gateOpen": "false",
+        "gateRange": "true",
+        "equipmentRange": "false",
+        "attempts": "1",
+        "rejected": "1",
+        "opening": "false",
+        "observed": "false",
+        "status": "已到門前，按 E 開門"
+      }
+    }
+  },
+  {
+    "test": "near E opens; scene still on approach side",
+    "data": {
+      "playerX": "0.000",
+      "playerZ": "0.460",
+      "gateOpen": "true",
+      "gateRange": "false",
+      "equipmentRange": "false",
+      "attempts": "0",
+      "rejected": "0",
+      "opening": "false",
+      "observed": "false",
+      "status": "門已開啟，向前走到設備 02"
+    }
+  },
+  {
+    "test": "walks through opened doorway",
+    "data": {
+      "playerX": "-0.000",
+      "playerZ": "-3.397",
+      "gateOpen": "true",
+      "gateRange": "false",
+      "equipmentRange": "true",
+      "attempts": "0",
+      "rejected": "0",
+      "opening": "false",
+      "observed": "false",
+      "status": "已到設備 02，按 E 查看設備"
+    }
+  },
+  {
+    "test": "equipment observed",
+    "data": {
+      "playerX": "-0.000",
+      "playerZ": "-3.613",
+      "gateOpen": "true",
+      "gateRange": "false",
+      "equipmentRange": "true",
+      "attempts": "0",
+      "rejected": "0",
+      "opening": "false",
+      "observed": "true",
+      "status": "P-02｜指示燈不亮，請記錄讀值"
+    }
+  },
+  {
+    "test": "request statuses",
+    "data": [
+      {
+        "status": 200,
+        "path": "/runtime/"
+      },
+      {
+        "status": 200,
+        "path": "/runtime/player/main.c7f424a2.js"
+      },
+      {
+        "status": 200,
+        "path": "/runtime/game/build.json"
+      },
+      {
+        "level": "warning",
+        "message": "%cElectron Security Warning (Insecure Content-Security-Policy) font-weight: bold; This renderer process has either no Content Security\n  Policy set or a policy with \"unsafe-eval\" enabled. This exposes users of\n  this app to unnecessary security risks.\n\nFor more information and help, consult\nhttps://electronjs.org/docs/tutorial/security.\nThis warning will not show up\nonce the app is packaged."
+      },
+      {
+        "status": 200,
+        "path": "/runtime/game/scenes/01-entrance.8336a568.json"
+      },
+      {
+        "status": 200,
+        "path": "/runtime/game/scripts/bundle.ff3e6789.mjs"
+      },
+      {
+        "level": "warning",
+        "message": "No available adapters."
+      },
+      {
+        "level": "warning",
+        "message": "THREE.WebGPURenderer: WebGPU is not available, running under WebGL2 backend."
+      },
+      {
+        "status": 200,
+        "path": "/runtime/game/assets/models/control-cabinet.d2a4a619.glb"
+      },
+      {
+        "status": 200,
+        "path": "/runtime/game/assets/models/pump-skid.8785eb1b.glb"
+      },
+      {
+        "status": 200,
+        "path": "/runtime/game/assets/models/reservoir.06003ae5.glb"
+      },
+      {
+        "status": 200,
+        "path": "/runtime/game/scenes/02-equipment.fd7b16d6.json"
+      },
+      {
+        "level": "info",
+        "message": "[演練任務腳本・Inspector 操作區] [巡場] CLOSED_SCENE_LIVE"
+      },
+      {
+        "status": 200,
+        "path": "/runtime/game/assets/models/control-cabinet.d2a4a619.glb"
+      },
+      {
+        "status": 200,
+        "path": "/runtime/game/assets/models/reservoir.06003ae5.glb"
+      },
+      {
+        "status": 200,
+        "path": "/runtime/game/assets/models/pump-skid.8785eb1b.glb"
+      },
+      {
+        "level": "info",
+        "message": "[演練任務腳本・Inspector 操作區] [巡場] GATE_ACTION_REJECTED_OUTSIDE_ZONE"
+      },
+      {
+        "level": "info",
+        "message": "[演練任務腳本・Inspector 操作區] [巡場] GATE_ACTION_ACCEPTED"
+      },
+      {
+        "status": 200,
+        "path": "/runtime/game/assets/models/control-cabinet.d2a4a619.glb"
+      },
+      {
+        "status": 200,
+        "path": "/runtime/game/assets/models/reservoir.06003ae5.glb"
+      },
+      {
+        "status": 200,
+        "path": "/runtime/game/assets/models/pump-skid.8785eb1b.glb"
+      },
+      {
+        "level": "info",
+        "message": "[演練任務腳本・Inspector 操作區] [巡場] GATE_OPEN_SCENE_LIVE"
+      },
+      {
+        "level": "info",
+        "message": "[演練任務腳本・Inspector 操作區] [巡場] EQUIPMENT_OBSERVED P-02"
+      }
+    ]
+  }
+]
